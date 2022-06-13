@@ -32,9 +32,9 @@ class MainActivity : AppCompatActivity() {
 
         registerReceiver(receiver, IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE))
 
-//        custom_button.setOnClickListener {
-//            download()
-//        }
+        custom_button.setOnClickListener {
+            download()
+        }
     }
 
     private val receiver = object : BroadcastReceiver() {
@@ -44,17 +44,20 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun download() {
-        val request =
-            DownloadManager.Request(Uri.parse(url))
-                .setTitle(getString(R.string.app_name))
-                .setDescription(getString(R.string.app_description))
-                .setRequiresCharging(false)
-                .setAllowedOverMetered(true)
-                .setAllowedOverRoaming(true)
 
-        val downloadManager = getSystemService(DOWNLOAD_SERVICE) as DownloadManager
-        downloadID =
-            downloadManager.enqueue(request)// enqueue puts the download request in the queue.
+        custom_button.setState(ButtonState.Loading)
+        return
+//        val request =
+//            DownloadManager.Request(Uri.parse(url))
+//                .setTitle(getString(R.string.app_name))
+//                .setDescription(getString(R.string.app_description))
+//                .setRequiresCharging(false)
+//                .setAllowedOverMetered(true)
+//                .setAllowedOverRoaming(true)
+//
+//        val downloadManager = getSystemService(DOWNLOAD_SERVICE) as DownloadManager
+//        downloadID =
+//            downloadManager.enqueue(request)// enqueue puts the download request in the queue.
     }
 
     companion object {

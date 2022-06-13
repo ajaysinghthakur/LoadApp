@@ -8,8 +8,10 @@
     <string name="notification_description">The Project 3 repository is downloaded</string>
     <string name="notification_button">See changes</string>
 
+    <!--Button state -->
     <string name="button_name">Click me</string>
     <string name="button_loading">We are loading </string>
+
     <string name="title_activity_detail">DetailActivity</string>
 
     <string name="glide_text">Glide - Image Loading Library by BumpTech</string>
