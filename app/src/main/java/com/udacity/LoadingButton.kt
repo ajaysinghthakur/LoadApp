@@ -116,7 +116,6 @@ class LoadingButton @JvmOverloads constructor(
             it.drawText(
                 text,
                 widthSize / 2.0f,
-                // See https://stackoverflow.com/questions/11120392/android-center-text-on-canvas
                 heightSize / 2.0f - ((textPaint.ascent() + textPaint.descent()) / 2f),
                 textPaint)
             if (buttonState == ButtonState.Loading) {
@@ -152,7 +151,7 @@ class LoadingButton @JvmOverloads constructor(
     override fun performClick(): Boolean {
         super.performClick()
         if (buttonState == ButtonState.Loading) {
-            return true
+            return false
         }
         return true
     }
